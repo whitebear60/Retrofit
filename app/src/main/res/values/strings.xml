@@ -1,4 +1,11 @@
 <resources>
     <string name="app_name">Retrofit</string>
     <string name="load">load</string>
+    <string name="tiLocation">Location</string>
+    <string name="search_results">Search Results</string>
+    <string name="ivAltAvatar">User Profile Picture</string>
+    <string name="tiLanguage">Language</string>
+    <string name="toastEmptyForm">Either location or language should be filled to search, or both.</string>
+    <string name="tvForks">{0} forks</string>
+    <string name="tvStars">{0} stars</string>
 </resources>

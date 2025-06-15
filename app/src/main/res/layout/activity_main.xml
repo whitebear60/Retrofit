@@ -3,22 +3,55 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     xmlns:app="http://schemas.android.com/apk/res-auto"
-    android:id="@+id/clRoot">
+    android:id="@+id/clRoot"
+    android:theme="@style/Theme.AppCompat.DayNight.NoActionBar">
 
     <androidx.constraintlayout.widget.ConstraintLayout
-        android:layout_width="wrap_content"
+        android:layout_width="300dp"
         android:layout_height="wrap_content"
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintEnd_toEndOf="parent">
 
+        <com.google.android.material.textfield.TextInputLayout
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintBottom_toTopOf="@id/tiLanguage"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="@string/tiLocation"
+            android:id="@+id/tiLocation">
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"/>
+
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <com.google.android.material.textfield.TextInputLayout
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/tiLocation"
+            app:layout_constraintBottom_toTopOf="@id/btLoad"
+            android:layout_marginTop="5dp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="@string/tiLanguage"
+            android:id="@+id/tiLanguage">
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"/>
+
+        </com.google.android.material.textfield.TextInputLayout>
+
         <com.google.android.material.button.MaterialButton
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="@string/load"
             android:id="@+id/btLoad"
-            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/tiLanguage"
             app:layout_constraintBottom_toTopOf="@id/pbProgress"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
@@ -31,12 +64,12 @@
             android:indeterminate="true"
             android:indeterminateBehavior="cycle"
             app:layout_constraintTop_toBottomOf="@id/btLoad"
-            app:layout_constraintBottom_toTopOf="@id/tvFact"
+            app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
             android:layout_marginVertical="5dp"
             android:visibility="gone"/>
-
+<!--
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
@@ -48,7 +81,7 @@
             android:layout_marginVertical="5dp"
             android:textSize="20sp"
             android:visibility="gone"
-            android:paddingHorizontal="20dp"/>
+            android:paddingHorizontal="20dp"/>-->
 
 
     </androidx.constraintlayout.widget.ConstraintLayout>
